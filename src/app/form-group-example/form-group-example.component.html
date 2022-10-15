@@ -1,0 +1,13 @@
+<form [formGroup]="registrationForm">
+    <label for="name">Name: </label>
+    <input type="text" id="name" formControlName="name" />
+    <label for="email">Email: </label>
+    <input type="text" id="email" formControlName="email" />
+</form>
+
+<div>{{ registrationForm.value | json }}</div>
+
+
+<button (click)="changeData()">Change data</button>
+
+<button (click)="changeName()">Change name</button>
